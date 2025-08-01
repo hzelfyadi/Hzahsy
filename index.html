@@ -8,6 +8,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/header.css">
     
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -356,6 +357,74 @@
                 once: true,
                 mirror: false
             });
+
+            // Announcement Banner Functionality
+            const announcementBanner = document.getElementById('announcementBanner');
+            const closeAnnouncement = document.getElementById('closeAnnouncement');
+            
+            // Check if user has already closed the banner
+            const announcementClosed = localStorage.getItem('announcementClosed');
+            
+            if (announcementClosed) {
+                announcementBanner.style.display = 'none';
+            }
+            
+            // Close button functionality
+            if (closeAnnouncement) {
+                closeAnnouncement.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    announcementBanner.style.transform = 'translateY(-100%)';
+                    localStorage.setItem('announcementClosed', 'true');
+                    setTimeout(() => {
+                        announcementBanner.style.display = 'none';
+                    }, 300);
+                });
+            }
+            
+            // Click on banner to scroll to eligibility section
+            announcementBanner.addEventListener('click', function() {
+                const eligibilitySection = document.getElementById('elegibilidad');
+                if (eligibilitySection) {
+                    eligibilitySection.scrollIntoView({ behavior: 'smooth' });
+                    // Close banner after clicking
+                    announcementBanner.style.transform = 'translateY(-100%)';
+                    localStorage.setItem('announcementClosed', 'true');
+                    setTimeout(() => {
+                        announcementBanner.style.display = 'none';
+                    }, 300);
+                }
+            });
+            
+            // Add scroll effect to header
+            const header = document.querySelector('.header');
+            if (header) {
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 50) {
+                        header.classList.add('scrolled');
+                    } else {
+                        header.classList.remove('scrolled');
+                    }
+                });
+            }
+            
+            // Mobile menu toggle
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                });
+                
+                // Close menu when clicking on a nav link
+                document.querySelectorAll('.nav-links a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        hamburger.classList.remove('active');
+                        navLinks.classList.remove('active');
+                    });
+                });
+            }
         });
     </script>
 </body>
