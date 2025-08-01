@@ -5,31 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aislamiento Térmico por 1€ - Aislamiento de Áticos</title>
     <meta name="description" content="Aislamiento térmico de áticos por solo 1€ con ayudas públicas. Reduce tu factura energética y mejora la eficiencia de tu hogar.">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- Announcement Banner -->
+    <div class="announcement-banner" id="announcementBanner">
+        <div class="announcement-content">
+            <img src="images/ecoisola-logo.png" alt="ECOAISLA Logo" class="announcement-logo">
+            <div class="announcement-text">
+                <span class="announcement-badge">¡Nuevo!</span>
+                <h3>¡Descubre cómo ahorrar en tu factura energética!</h3>
+                <p>Consulta tu elegibilidad ahora mismo</p>
+            </div>
+            <button class="announcement-close" id="closeAnnouncement">×</button>
+        </div>
+    </div>
+
     <!-- Header -->
-    <header>
-        <nav>
-            <a href="#" class="logo">
-                <i class="fas fa-home"></i>
-                <span>AISLA-ECO</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="#inicio" class="active"><i class="fas fa-home"></i> Inicio</a></li>
-                <li><a href="#beneficios"><i class="fas fa-star"></i> Beneficios</a></li>
-                <li><a href="#por-que-1euro"><i class="fas fa-euro-sign"></i> ¿Por qué 1€?</a></li>
-                <li><a href="#como-funciona"><i class="fas fa-cogs"></i> Cómo funciona</a></li>
-                <li><a href="#faq"><i class="fas fa-question-circle"></i> Preguntas</a></li>
-                <li class="nav-cta"><a href="#contacto" class="cta-button primary"><i class="fas fa-paper-plane"></i> Contacto</a></li>
-            </ul>
-            <button class="hamburger" aria-label="Menú">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </nav>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <img src="images/ecoisola-logo.png" alt="ECOAISLA Logo" class="logo-img">
+                    <span class="logo-text">ECOAISLA</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#inicio" class="active"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="#beneficios"><i class="fas fa-star"></i> Beneficios</a></li>
+                    <li><a href="#por-que-1euro"><i class="fas fa-euro-sign"></i> ¿Por qué 1€?</a></li>
+                    <li><a href="#como-funciona"><i class="fas fa-cogs"></i> Cómo funciona</a></li>
+                    <li><a href="#faq"><i class="fas fa-question-circle"></i> Preguntas</a></li>
+                    <li class="nav-cta"><a href="#contacto" class="cta-button primary"><i class="fas fa-paper-plane"></i> Contacto</a></li>
+                </ul>
+                <button class="hamburger" aria-label="Menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
     </header>
 
     <!-- Hero Section -->
@@ -73,52 +96,96 @@
     <!-- Main Content -->
     <main>
         <!-- Sección de Beneficios -->
-        <section id="por-que-aislar" class="benefits">
-            <h2>✅ Contribución ecológica para reducir tu huella de carbono</h2>
-            
-            <div class="benefit-content">
-                <h3>¿Por qué aislar tu ático?</h3>
-                <p>El aislamiento de ático es clave para reducir el consumo de calefacción y aire acondicionado. Un hogar mal aislado pierde hasta un 30% del calor en invierno, lo que se traduce en facturas de energía más altas. En verano, el calor se filtra y obliga a utilizar más el aire acondicionado.</p>
-                
-                <div class="benefit-cards">
-                    <div class="card">
-                        <div class="card-icon">
-                            <img src="https://img.icons8.com/color/96/000000/money-bag-euro.png" alt="Ahorro económico">
-                        </div>
-                        <h4>Reducción de la factura energética</h4>
-                        <p>Hasta un 30% de ahorro en tus facturas de energía.</p>
+        <section id="por-que-aislar" class="eco-contribution section-padding">
+            <div class="container">
+                <header class="section-header text-center" data-aos="fade-up">
+                    <div class="eco-badge">Sostenibilidad y ahorro</div>
+                    <h2 class="section-title">
+                        <span class="highlight">Contribución ecológica</span> para reducir tu huella de carbono
+                    </h2>
+                    <p class="section-description">Únete a la revolución verde y comienza a ahorrar en tu factura energética</p>
+                    <div class="divider">
+                        <span class="divider-line"></span>
+                        <span class="divider-icon"><i class="fas fa-leaf"></i></span>
+                        <span class="divider-line"></span>
                     </div>
-                    <div class="card">
-                        <div class="card-icon">
-                            <img src="https://img.icons8.com/color/96/000000/thermometer.png" alt="Temperatura estable">
+                </header>
+
+                <div class="eco-grid">
+                    <div class="eco-content" data-aos="fade-right">
+                        <h3 class="eco-title">¿Por qué aislar tu ático?</h3>
+                        <p class="eco-text">El aislamiento de ático es clave para reducir el consumo de calefacción y aire acondicionado. Un hogar mal aislado pierde hasta un <strong>30% del calor en invierno</strong>, lo que se traduce en facturas de energía más altas. En verano, el calor se filtra y obliga a utilizar más el aire acondicionado.</p>
+                        
+                        <div class="benefits-grid">
+                            <article class="benefit-card" data-aos="zoom-in" data-aos-delay="100">
+                                <div class="benefit-icon">
+                                    <img src="https://img.icons8.com/color/96/000000/money-bag-euro.png" alt="Ahorro económico" width="64" height="64" loading="lazy">
+                                </div>
+                                <h4 class="benefit-title">Reducción de la factura energética</h4>
+                                <p class="benefit-desc">Hasta un <strong>30% de ahorro</strong> en tus facturas de energía.</p>
+                            </article>
+                            
+                            <article class="benefit-card" data-aos="zoom-in" data-aos-delay="200">
+                                <div class="benefit-icon">
+                                    <img src="https://img.icons8.com/color/96/000000/thermometer.png" alt="Temperatura estable" width="64" height="64" loading="lazy">
+                                </div>
+                                <h4 class="benefit-title">Temperatura estable</h4>
+                                <p class="benefit-desc">Mantén una temperatura agradable durante todo el año.</p>
+                            </article>
+                            
+                            <article class="benefit-card" data-aos="zoom-in" data-aos-delay="300">
+                                <div class="benefit-icon">
+                                    <img src="https://img.icons8.com/color/96/000000/leaf.png" alt="Hogar ecológico" width="64" height="64" loading="lazy">
+                                </div>
+                                <h4 class="benefit-title">Hogar ecológico</h4>
+                                <p class="benefit-desc">Reduce tu huella de carbono y contribuye al medio ambiente.</p>
+                            </article>
+                            
+                            <article class="benefit-card" data-aos="zoom-in" data-aos-delay="400">
+                                <div class="benefit-icon">
+                                    <img src="https://img.icons8.com/color/96/000000/euro-pound-exchange.png" alt="100% financiado" width="64" height="64" loading="lazy">
+                                </div>
+                                <h4 class="benefit-title">100% financiado</h4>
+                                <p class="benefit-desc">Sin costes adicionales gracias a los CAE.</p>
+                            </article>
                         </div>
-                        <h4>Temperatura estable</h4>
-                        <p>Mantén una temperatura agradable durante todo el año.</p>
                     </div>
-                    <div class="card">
-                        <div class="card-icon">
-                            <img src="https://img.icons8.com/color/96/000000/leaf.png" alt="Hogar ecológico">
+
+                    <div class="eco-image" data-aos="fade-left">
+                        <div class="image-wrapper">
+                            <img 
+                                src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                alt="Aislamiento de ático" 
+                                class="img-fluid rounded-lg shadow-lg"
+                                loading="lazy"
+                                width="800"
+                                height="600">
+                            <div class="image-overlay">
+                                <span class="badge">+30% Eficiencia</span>
+                            </div>
                         </div>
-                        <h4>Hogar ecológico</h4>
-                        <p>Reduce tu huella de carbono y contribuye al medio ambiente.</p>
-                    </div>
-                    <div class="card">
-                        <div class="card-icon">
-                            <img src="https://img.icons8.com/color/96/000000/euro-pound-exchange.png" alt="100% financiado">
-                        </div>
-                        <h4>100% financiado</h4>
-                        <p>Sin costes adicionales gracias a los CAE.</p>
                     </div>
                 </div>
-            </div>
 
-            <div class="image-content">
-                <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Aislamiento de ático">
-            </div>
-            <div id="por-que-1euro" class="how-it-works">
-                <h3>¿Cómo es posible que el aislamiento de áticos esté financiado por solo 1€ en España?</h3>
-                <p>El aislamiento de buhardillas por 1 euro se basa en una obligación legal impuesta a los proveedores de energía en el marco de los Certificados de Ahorro Energético (CAE), regulados por el Real Decreto 36/2023 e integrados en el Sistema Nacional de Obligaciones de Eficiencia Energética (SNOEE).</p>
-                <p>Desde la adopción del Pacto Verde Europeo (2019) y la revisión de la Directiva 2012/27/UE de Eficiencia Energética, los proveedores de energía, distribuidores de productos petrolíferos y gas están obligados a contribuir a la reducción del consumo energético en los hogares. Para cumplir con esta obligación, financian trabajos de aislamiento, priorizando a las familias más vulnerables.</p>
+                <div id="por-que-1euro" class="funding-info" data-aos="fade-up">
+                    <div class="info-card">
+                        <h3 class="info-title">¿Cómo es posible que el aislamiento de áticos esté financiado por solo 1€ en España?</h3>
+                        <div class="info-content">
+                            <p>El aislamiento de buhardillas por 1 euro se basa en una obligación legal impuesta a los proveedores de energía en el marco de los Certificados de Ahorro Energético (CAE), regulados por el Real Decreto 36/2023 e integrados en el Sistema Nacional de Obligaciones de Eficiencia Energética (SNOEE).</p>
+                            <p>Desde la adopción del Pacto Verde Europeo (2019) y la revisión de la Directiva 2012/27/UE de Eficiencia Energética, los proveedores de energía, distribuidores de productos petrolíferos y gas están obligados a contribuir a la reducción del consumo energético en los hogares. Para cumplir con esta obligación, financian trabajos de aislamiento, priorizando a las familias más vulnerables.</p>
+                        </div>
+                        <div class="info-footer">
+                            <a href="#contacto" class="btn btn-primary btn-pulse">
+                                <span class="btn-text">Solicitar Estudio Gratis</span>
+                                <span class="btn-icon">→</span>
+                            </a>
+                            <a href="#preguntas-frecuentes" class="btn btn-outline">
+                                <span class="btn-text">Más información</span>
+                                <span class="btn-icon">→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -278,6 +345,18 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        // Initialize AOS
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+                mirror: false
+            });
+        });
+    </script>
 </body>
 </html>
